@@ -3,14 +3,14 @@ module WebService
 go 1.23.0
 
 require (
+	github.com/go-pg/migrations/v7 v7.1.11
 	github.com/go-pg/pg/v9 v9.2.1
 	github.com/gorilla/mux v1.8.1
-	github.com/jinzhu/configor v1.2.2
 	github.com/lib/pq v1.10.9
+	github.com/pkg/errors v0.9.1
 )
 
 require (
-	github.com/BurntSushi/toml v1.2.0 // indirect
 	github.com/codemodus/kace v0.5.1 // indirect
 	github.com/go-pg/zerochecker v0.2.0 // indirect
 	github.com/golang/protobuf v1.4.2 // indirect

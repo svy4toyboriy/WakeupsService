@@ -40,6 +40,17 @@ func (s *Server) respond(w http.ResponseWriter, r *http.Request, data interface{
 	}
 }
 
+func (s *Server) error(w http.ResponseWriter, r *http.Request, err error, status int) {
+	w.Header().Add("Content-Type", "applications/json")
+	w.WriteHeader(status)
+	if err != nil {
+		err := json.NewEncoder(w).Encode(e(err))
+		if err != nil {
+
+		}
+	}
+}
+
 func (s *Server) decode(w http.ResponseWriter, r *http.Request, v interface{}) error {
 	return json.NewDecoder(r.Body).Decode(v)
 }
